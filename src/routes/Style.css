@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #d0e9c1;
+}
+
+
+.container {
+    background-color: #d0e9c1;
+    margin: 9rem auto;
+    min-height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-areas:
+        "box1 box1 box6"
+        "box1 box1 box6"
+        "box1 box1 box6"
+        "box4 box5 box6"
+        "box4 box5 box6"
+        "box2 box2 box6"
+        "box3 box3 box3"
+        "box3 box3 box3";
+}
+
+.container .box {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.container .box.box1 {
+    grid-area: box1;
+}
+
+.container .box.box1 img {
+    width: 80%;
+    height: auto;
+}
+
+.container .box.box2 {
+    grid-area: box2;
+    margin-left: auto;
+    padding: 2rem;
+}
+
+.container .box.box2 a {
+    text-decoration: none;
+}
+
+.container .box.box2 button {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: #79AC78;
+    color: black;
+    border-radius: .5rem;
+    border: 2px solid #618264;
+    transition-duration: 1s;
+    transition-property: border, box-shadow;
+}
+
+.container .box.box2 button:hover {
+    border: 2px solid #618264;
+    box-shadow: rgba(0, 84, 69, 0.5) 5px 5px, #618264 10px 10px, #A0C49D 15px 15px;
+}
+
+.container .box.box3 {
+    grid-area: box3;
+    padding: 1rem;
+}
+
+.container .box.box3 h3 {
+    padding: 1rem;
+    font-size: 30px;
+}
+
+.container .box.box3 .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10rem;
+    padding: 1rem;
+}
+
+.container .box.box3 .cards .card {
+    background-color: #aedbaa;
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.container .box.box3 .cards .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box.box3 .cards .card .content {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.container .box.box4 {
+    grid-area: box4;
+    border: 3px double #A0C49D;
+}
+
+.container .box.box4 h2 {
+    font-size: 32px;
+    padding: 3px;
+}
+
+.container .box.box4 h3 {
+    padding: 3px;
+}
+
+.container .box.box5 {
+    grid-area: box5;
+    border: 3px double #A0C49D;
+}
+
+.container .box.box5 p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .box.box6 {
+    grid-area: box6;
+    background-color: #79AC78;
+    border-radius: 30px;
+}
+
+.container .box.box6 .box-item {
+    color: black;
+    padding: 2rem;
+    margin: 10px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    margin: 9rem auto;
+    background-color: #d0e9c1;
+}
+
+.container2 .contato {
+    background-color: #A0C49D;
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 60vh;
+    width: 60%;
+}
+
+.container2 .contato .form {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.container2 .contato .form .field {
+    padding-bottom: 10px;
+}
+
+.container2 .contato .form .input {
+    border-radius: 5px;
+    background-color: #e9e9f7;
+    padding: 5px;
+    width: 100%;
+    color: #7a7ab3;
+    border: 1px solid #dadaf7;
+}
+
+.container2 .contato .form .input:focus-visible {
+    outline: 1px solid #aeaed6;
+}
+
+.container2 .contato .form .input::placeholder {
+    color: #bcbcdf;
+}
+
+.container2 .contato .form label {
+    color: #B2BAC8;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 4px;
+}
+
+.container2 .contato .form button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #618264;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.container2 .contato .form button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.container2 .contato .form button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.container2 .contato .form button:hover span {
+    padding-right: 15px;
+}
+
+.container2 .contato .form button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+footer {
+    width: 100%;
+    height: 6vh;
+}
+
+footer p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
